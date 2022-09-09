@@ -4,7 +4,6 @@
  * main - Entry point
  * This programs print the size of various
  * types compiled and run on
- * 
  * And it is to return a 0 as output
  * Return: Always 0 (Success)
  */
