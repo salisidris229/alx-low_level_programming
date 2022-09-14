@@ -1,25 +1,27 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-/**
- * main - Entry point
- * Description: Print base 16 numbers
- * Return: Always 0 (success)
- */
-int main(void)
-{
-	char c;
-	char d = '0';
+#include "main.h"
 
-	while (d <= '9')
+/**
+ * jack_bauer - print every minute of a day
+ * Description: print minutes 00:00 to 23:59
+ */
+
+void jack_bauer(void)
+{
+	int hours = 0;
+	int min = 0;
+
+	while (hours < 24)
 	{
-		  putchar(d);
-											          d++;
-											}
-	for (c = 'a'; c <= 'f'; c++)
-	{
-												   putchar(c);
-											}
-		   putchar('\n');
-	           return (0);
+		while (min < 60)
+												{
+													_putchar('0' + (hours / 10));
+			_putchar('0' + (hours % 10));
+			_putchar(':');
+			_putchar('0' + (min / 10));							_putchar('0' + (min % 10));
+			_putchar('\n');
+			min++;
+																																}
+											    	min = 0;
+	        hours++;
+	}
 }
