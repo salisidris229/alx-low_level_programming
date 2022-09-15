@@ -1,31 +1,25 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - print 1 to 100,
- * multiples of 3 with Fizz,
- * multiples of 5 with Buzz
- * and multiple of both 3 and 5 with FizzBuzz
- * Return: 0 on success
+ * print_square - print a square of #'s given size
+ * @size: size to draw
  */
 
-int main(void)
+void print_square(int size)
 {
-	int i;
+	int row, column;
 
-	for (i = 1; i <= 100; i++)
+	if (size > 0)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
-			printf("FizzBuzz");
-		else if (i % 3 == 0)
-			printf("Fizz");
-		else if (i % 5 == 0)
-			printf("Buzz");
-		else
-			printf("%d", i);
-
-		if (i < 100)
-			printf(" ");
+		for (row = 1; row <= size; row++)
+		{
+			for (column = 1; column <= size; column++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
+		}
 	}
-	printf("\n");
-	return (0);
+	else
+		_putchar('\n');
 }
